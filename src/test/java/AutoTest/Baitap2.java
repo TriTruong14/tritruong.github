@@ -33,7 +33,7 @@ public class Baitap2 {
 //    }
     static float average(double Toan, double Ly, double Hoa) {
         double dtb = (Toan + Ly + Hoa) / 3;
-        return dtb;
+        return (float) dtb;
     }
 
 
@@ -53,20 +53,20 @@ public class Baitap2 {
         return result;
 
 
-        public static void main (String[]args){
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.println("Điểm Toán ");
-            double Toan = scanner.nextDouble();
-            System.out.println("Điểm Lý ");
-            double Ly = scanner.nextDouble();
-            System.out.println("Điểm Hóa ");
-            double Hoa = scanner.nextDouble();
-
-            double dtb = average(Toan, Ly, Hoa);
-            String danhGia = xepLoai(dtb);
-
-            System.out.println(danhGia);
-        }
+//        public static void main (String[]args){
+//            Scanner scanner = new Scanner(System.in);
+//
+//            System.out.println("Điểm Toán ");
+//            double Toan = scanner.nextDouble();
+//            System.out.println("Điểm Lý ");
+//            double Ly = scanner.nextDouble();
+//            System.out.println("Điểm Hóa ");
+//            double Hoa = scanner.nextDouble();
+//
+//            double dtb = average(Toan, Ly, Hoa);
+//            String danhGia = xepLoai(dtb);
+//
+//            System.out.println(danhGia);
+//        }
     }
 }
