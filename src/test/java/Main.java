@@ -48,6 +48,7 @@ public class Main {
             //ví dụ: (//li[text()="Item"])[3] --> trong 1 page có nhiều phần tử giống nhau, chỉ khác vị trí thì thêm index cho phần tử cần tìm.
             //                                    trỏ đến Item thứ 3 trong nhiều items
 
+
         //following-sibling  --> để tìm phần tử có liên quan đến phần tử khác, dùng để lấy thẻ đứng sau
             //ví dụ 1: label/following-sibling::input[@name="username"]
             //ví dụ 2: (//label/following-sibling::input)[1]

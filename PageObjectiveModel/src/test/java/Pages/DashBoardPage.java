@@ -1,0 +1,27 @@
+package Pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
+public class DashBoardPage {
+        private WebDriver driver;
+        public DashBoardPage (WebDriver driver) {
+            this.driver = driver;
+        }
+
+        public void goToPimPage () {
+            new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='PIM']")));
+            driver.findElement(By.xpath("//span[text()='PIM']")).click();
+        }
+        public void goToAdminPage () {
+            driver.findElement(By.xpath("//span[text()='Admin']")).click();
+        }
+
+        public void goToMyInfoPage () {
+            driver.findElement(By.xpath("//span[text()='My Info']")).click();
+        }
+    }

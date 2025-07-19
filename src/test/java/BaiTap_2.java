@@ -12,11 +12,12 @@ public class BaiTap_2 {
 
         try {
             driver.get("https://opensource-demo.orangehrmlive.com");
-            Thread.sleep(3000);
+            Thread.sleep(5000);
 
             driver.findElement(By.name("username")).sendKeys("Admin");
             driver.findElement(By.name("password")).sendKeys("admin123");
             driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+            System.out.println("Login successful");
             Thread.sleep(3000);
 
             driver.findElement(By.xpath("//span[text()=\"PIM\"]")).click();
@@ -27,13 +28,13 @@ public class BaiTap_2 {
             driver.findElement(By.name("lastName")).sendKeys("Truong");
             WebElement empID = driver.findElement(By.xpath("//label[text()=\"Employee Id\"]/../following-sibling::div/input"));
             String empIDValue = empID.getAttribute("value").trim();
-
             driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
 
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (InterruptedException e) {
+            System.out.println("Lỗi" + e.getMessage());
+        } finally {
+            driver.quit();
         }
-
     }
 }
